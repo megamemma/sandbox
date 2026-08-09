@@ -2,7 +2,7 @@
 
 :root {
     --raw-white: hsl(0, 0%, 100%);
-    --raw-cold-gray: hsl(214, 10%, 53%);
+    --raw-cold-gray: hsl(213, 27%, 84%);
     --raw-dark-blue: hsl(218, 44%, 22%);
 }
 
@@ -14,27 +14,36 @@
 
 body {
     font-family: "Outfit", sans-serif;
+    font-size: 0.9rem;
     background-color: var(--raw-cold-gray);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.container {
-    max-width: 375px;
-    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    padding: 1.25rem;
 }
 
 .card {
     background-color: var(--raw-white);
-    padding: 18px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    max-width: 320px;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
 }
 
 .card img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 0.5rem;
+}
+
+.card h2 {
+    color: var(--raw-dark-blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.card p {
+    color: gray;
+    font-weight: 400;
+    padding: 1rem;
 }
