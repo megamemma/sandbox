@@ -2,8 +2,9 @@
 
 :root {
     --raw-white: hsl(0, 0%, 100%);
-    --raw-cold-gray: hsl(213, 27%, 84%);
-    --raw-dark-blue: hsl(218, 44%, 22%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
 }
 
 * {
@@ -15,7 +16,7 @@
 body {
     font-family: "Outfit", sans-serif;
     font-size: 0.9rem;
-    background-color: var(--raw-cold-gray);
+    background-color: var(--slate-300);
     min-height: 100vh;
     display: grid;
     place-content: center;
@@ -36,14 +37,15 @@ body {
 }
 
 .card h2 {
-    color: var(--raw-dark-blue);
-    font-size: 1.25rem;
+    color: var(--slate-900);
+    font-size: 22px;
     font-weight: 700;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 0.55rem 0.5rem 0.55rem;
 }
 
 .card p {
-    color: gray;
+    color: var(--slate-500);
     font-weight: 400;
+    font-size: 15px;
     padding: 1rem;
 }
