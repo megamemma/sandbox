@@ -48,6 +48,7 @@ button.btn-tag {
 }
 
 .card-text {
+    margin-left: 0.5rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -70,4 +71,12 @@ a.author-name {
     text-decoration: none;
     color: var(--black);
     font-weight: 800;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+    margin-left: 0.7rem;
 }
