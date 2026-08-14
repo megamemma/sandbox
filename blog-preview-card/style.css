@@ -89,6 +89,8 @@ a.author-name {
     margin-top: 0.5rem;
     margin-left: 0.7rem;
 }
+/* 
+Classes added to HTML via JS:
 
 .text-preset-1 {
     font-size: 1.5rem;
@@ -116,4 +118,4 @@ a.author-name {
     font-weight: 800;
     line-height: 150%;
     letter-spacing: 0;
-}
+} */
