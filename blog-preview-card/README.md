@@ -24,8 +24,8 @@ Users should be able to:
 ![Desktop](./screenshots/desktop.png)
 
 ### Links
-- Solution URL: [GitHub repository](https://your-solution-url.com)
-- Live Site URL: [Live demo](https://your-live-site-url.com)
+- Solution URL: [GitHub repository](https://github.com/megamemma/sandbox/tree/main/blog-preview-card)
+- Live Site URL: [Live demo](https://blog-preview-card-ten-umber.vercel.app/)
 
 ### Built with
 - Semantic HTML5 markup
@@ -84,4 +84,3 @@ For future projects, I want to:
 
 ## Author
 - Github - [@megamemma](https://www.github.com/megamemma)
-
