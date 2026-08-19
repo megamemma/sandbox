@@ -20,7 +20,7 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
-![Mobile](./screenshots/mobile.png)
+<img src="./screenshots/mobile_ip16pm.png" alt="Mobile Preview" width="320">
 ![Desktop](./screenshots/desktop.png)
 
 ### Links
