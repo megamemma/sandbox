@@ -20,8 +20,11 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
-<img src="./screenshots/mobile_ip16pm.png" alt="Mobile Preview" width="320">
-![Desktop](./screenshots/desktop.png)
+<p align="center">
+  <img src="./screenshots/mobile_ip16pm.png" alt="Mobile Preview" width="320">
+  <br>
+  <img src="./screenshots/desktop.png" alt="Desktop Preview" style="max-width: 100%;">
+</p>
 
 ### Links
 - Solution URL: [GitHub repository](https://github.com/megamemma/sandbox/tree/main/blog-preview-card)
