@@ -81,10 +81,6 @@ img.illustration-article {
     color: var(--gray-500);
 }
 
-.author-pfp {
-    /* border-radius: 50%; */
-}
-
 .author-name {
     color: var(--gray-950);
 }
@@ -116,14 +112,14 @@ img.illustration-article {
 }
 
 .text-preset-3-medium {
-    font-size: 0.825rem;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0;
 }
 
 .text-preset-3-extra-bold {
-    font-size: 0.825rem;
+    font-size: 0.875rem;
     font-weight: 800;
     line-height: 150%;
     letter-spacing: 0;
