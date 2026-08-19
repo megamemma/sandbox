@@ -72,8 +72,14 @@ img.illustration-article {
     text-decoration: none;
 }
 
-.article-head a:hover,
-.article-head a:focus-visible {
+.article-head:link,
+.article-head:visited {
+    color: inherit;
+    text-decoration: none;
+} 
+
+.article-head:hover,
+.article-head:focus-visible {
     color: var(--main-yellow);
 }
 
