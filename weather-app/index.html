@@ -11,27 +11,36 @@
         <article class="weather-card">
             <div class="search-row">
                 <form action="" class="search">
-                    <input type="text" placeholder="Search city">
+                    <input type="text" placeholder="Search city"
+                    spellcheck="false">
                     <button type="submit">
-                        <img width="25" src="./assets/images/search.png"></img>
+                        <img width="20" src="./assets/images/search.png" alt=""></img>
                     </button>
                 </form>
             </div>
             
             <div class="main-info">
-                <img class="weather-icon"></img>
-                <h1 class="degrees celsius">--</h1>
+                <img width="100" class="weather-icon" src="./assets/images/clear.png"></img>
+                <h1 class="degrees celsius">--°C</h1>
                 <h2 class="city">--</h2>
             </div>
             
             <div class="weather-stats">
-                <img src="./assets/images/humidity.png"></img>
-                <p class="stats-value">00</p>
-                <p>Humidity</p>
-
-                <img src="./assets/images/wind.png"></img>
-                <p class="stats-value">00</p>
-                <p>Wind Speed</p>
+                <div>
+                    <img src="./assets/images/humidity.png"></img>
+                    <div class="weather-stats-text">
+                        <p class="stats-value">00%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+   
+                <div>
+                    <img src="./assets/images/wind.png"></img>
+                    <div class="weather-stats-text">
+                        <p class="stats-value">00 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
             </div>
         </article>
     </main>

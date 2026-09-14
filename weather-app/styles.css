@@ -30,8 +30,9 @@ button {
 :root {
     --white-50: hsl(0, 0%, 100%);
     --gray-400: hsl(220, 10%, 65%);
+    --gray-800: hsl(0, 0%, 13.3%);
 
-    --turquoise-300: hsl(174, 60%, 55%);
+    --turquoise-300: hsl(174, 60%, 55%); 
     --purple-400: hsl(255, 55%, 60%); 
 
     /* Desktop */
@@ -55,8 +56,7 @@ button {
 
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    background-color: darkslategray;
+    background-color: var(--gray-800);
     
     display: grid;
     place-items: center;
@@ -64,13 +64,37 @@ body {
 }
 
 .weather-card {
+    max-width: 470px;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--turquoise-300), var(--purple-400));
+    color: var(--white-50);
     display: grid;
-    grid-template-rows: 30% 40% 30%;
+    grid-template-rows: 20% 60% 20%;
 }
 
-.search-row, .main-info, .weather-stats {
+.search-row > form, .main-info, .weather-stats {
     display: flex;
     justify-content: center;
+}
+
+.search-row > form {
+    align-items: center;
+    margin: var(--space-200);
+    gap: 10px;
+}
+
+.search-row input {
+    height: var(--space-500);
+    border-radius: var(--radius-md);
+    padding: var(--space-100);
+    margin: var(--space-100);
+}
+
+.search-row button {
+    height: var(--space-500);
+    background-color: var(--white-50);
+    border-radius: var(--radius-md);
+    padding: var(--space-100);
 }
 
 .main-info {
@@ -78,14 +102,43 @@ body {
     align-items: center;
 }
 
-.weather-card > div:nth-child(1){
-    background-color: gray;
+.weather-stats > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
 }
 
-.weather-card > div:nth-child(2) {
-    background-color: green;
+.weather-stats img {
+    aspect-ratio: 1 / 1;
+    width: 35px;
+    height: 35px;
+    margin: var(--space-100);
 }
 
-.weather-card > div:nth-child(3) {
-    background-color: blue;
+.weather-stats-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+p.stats-value {
+    font-size: var(--fs-500);
+}
+
+/* TESTS, CLEAN OUT */ 
+form > * {
+    border: 1px solid rgb(142, 85, 198);
+}
+
+.weather-card div {
+    border: 1px solid rgb(134, 58, 210);
+}
+
+.main-info > * {
+    border: 1px solid rgb(240, 216, 31);
+}
+
+.weather-stats > * {
+    border: 1px solid rgb(0, 15, 218);
 }
