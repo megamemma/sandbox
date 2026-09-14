@@ -9,24 +9,28 @@
 <body>
     <main>
         <article class="weather-card">
-            <form action="" class="search">
-                <input type="text" placeholder="Search city">
-                <button type="submit">
-                    <img src="./assets/images/search.png"></img>
-                </button>
-            </form>
-
-            <img class="weather-icon"></img>
-            <h1 class="degrees celsius">--</h1>
-            <h2 class="city">--</h2>
+            <div class="search-row">
+                <form action="" class="search">
+                    <input type="text" placeholder="Search city">
+                    <button type="submit">
+                        <img width="25" src="./assets/images/search.png"></img>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="main-info">
+                <img class="weather-icon"></img>
+                <h1 class="degrees celsius">--</h1>
+                <h2 class="city">--</h2>
+            </div>
             
             <div class="weather-stats">
                 <img src="./assets/images/humidity.png"></img>
-                <p class="stats-value"></p>
+                <p class="stats-value">00</p>
                 <p>Humidity</p>
 
                 <img src="./assets/images/wind.png"></img>
-                <p class="stats-value"></p>
+                <p class="stats-value">00</p>
                 <p>Wind Speed</p>
             </div>
         </article>

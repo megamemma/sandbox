@@ -53,3 +53,39 @@ button {
     --radius-md: 1.5rem;
 }
 
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    background-color: darkslategray;
+    
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+}
+
+.weather-card {
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
+}
+
+.search-row, .main-info, .weather-stats {
+    display: flex;
+    justify-content: center;
+}
+
+.main-info {
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-card > div:nth-child(1){
+    background-color: gray;
+}
+
+.weather-card > div:nth-child(2) {
+    background-color: green;
+}
+
+.weather-card > div:nth-child(3) {
+    background-color: blue;
+}
