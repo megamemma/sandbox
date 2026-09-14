@@ -32,8 +32,8 @@ button {
     --gray-400: hsl(220, 10%, 65%);
     --gray-800: hsl(0, 0%, 13.3%);
 
-    --turquoise-300: hsl(174, 60%, 55%); 
-    --purple-400: hsl(255, 55%, 60%); 
+    --turquoise-300: hsl(161, 83%, 56%); 
+    --purple-400: hsl(255, 40%, 67%); 
 
     /* Desktop */
     --fs-300: 0.875rem;   
@@ -55,7 +55,7 @@ button {
 }
 
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "DM Sans", sans-serif;
     background-color: var(--gray-800);
     
     display: grid;
@@ -65,11 +65,12 @@ body {
 
 .weather-card {
     max-width: 470px;
-    min-height: 400px;
+    min-height: 500px;
     background: linear-gradient(135deg, var(--turquoise-300), var(--purple-400));
     color: var(--white-50);
+    border-radius: var(--radius-md);
     display: grid;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-rows: 15% auto 20%;
 }
 
 .search-row > form, .main-info, .weather-stats {
@@ -79,22 +80,25 @@ body {
 
 .search-row > form {
     align-items: center;
-    margin: var(--space-200);
-    gap: 10px;
+    margin: var(--space-300) var(--space-200);
+    gap: var(--space-100);
 }
 
 .search-row input {
     height: var(--space-500);
+    
+    padding: var(--space-100) var(--space-200);
+
+    border: none;
+    outline: none;
     border-radius: var(--radius-md);
-    padding: var(--space-100);
-    margin: var(--space-100);
 }
 
 .search-row button {
     height: var(--space-500);
     background-color: var(--white-50);
     border-radius: var(--radius-md);
-    padding: var(--space-100);
+    padding: var(--space-100) calc(var(--space-100) * 1.5);
 }
 
 .main-info {
@@ -102,10 +106,25 @@ body {
     align-items: center;
 }
 
+.main-info img {
+    margin-bottom: var(--space-300);
+}
+
+h1.degrees {
+    font-size: calc(var(--fs-700)* 1.2);
+}
+
+h2.city {
+    font-size: var(--fs-600); 
+}
+
+.weather-stats {
+    gap: var(--space-300);
+}
+
 .weather-stats > div {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     align-items: center;
 }
 
@@ -119,15 +138,20 @@ body {
 .weather-stats-text {
     display: flex;
     flex-direction: column;
-    max-width: 100px;
 }
 
 p.stats-value {
     font-size: var(--fs-500);
 }
 
+.weather-stats-text:nth-child(2) {
+    font-size: calc(var(--fs-300) / 1.1);
+}
+
+
+
 /* TESTS, CLEAN OUT */ 
-form > * {
+/* form > * {
     border: 1px solid rgb(142, 85, 198);
 }
 
@@ -141,4 +165,4 @@ form > * {
 
 .weather-stats > * {
     border: 1px solid rgb(0, 15, 218);
-}
+} */
