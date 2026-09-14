@@ -1,0 +1,55 @@
+/* MODERN CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+ 
+input, button, textarea, select {
+    font: inherit;
+}
+ 
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+ 
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+:root {
+    --white-50: hsl(0, 0%, 100%);
+    --gray-400: hsl(220, 10%, 65%);
+
+    --turquoise-300: hsl(174, 60%, 55%);
+    --purple-400: hsl(255, 55%, 60%); 
+
+    /* Desktop */
+    --fs-300: 0.875rem;   
+    --fs-400: 1rem;       
+    --fs-500: 1.5rem;    
+    --fs-600: 2rem;
+    --fs-700: 3rem; 
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --space-100: 0.5rem;
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+ 
+    --radius-md: 1.5rem;
+}
+
