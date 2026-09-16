@@ -103,21 +103,16 @@ body {
 
 .toast {
     position: fixed;
-    bottom: 30px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%) translateY(100px);
-    background: #333; 
+    background: var(--gray-400); 
     color: var(--white-50);
     padding: var(--space-100) var(--space-200);
     border-radius: var(--radius-md);
     opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
-}
-
-.toast.show {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
 }
 
 .main-info {
@@ -170,6 +165,22 @@ p.stats-value {
 
 .weather-stats-text:nth-child(2) {
     font-size: calc(var(--fs-300) / 1.1);
+}
+
+/* Hide on faulty input: */
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.main-info,
+.weather-stats {
+    transition: opacity 0.3s ease;
+}
+
+.main-info.hidden,
+.weather-stats.hidden {
+    opacity: 0.2;
 }
 
 

@@ -4,7 +4,8 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
-const toast = document.querySelector(".toast");
+const mainInfo = document.querySelector(".main-info");
+const weatherStats = document.querySelector(".weather-stats");
 const icons = {
     Clouds: "clouds.png",
     Rain: "rain.png",
@@ -13,10 +14,14 @@ const icons = {
     Clear: "clear.png",
     Snow: "snow.png",
 }; 
+const toast = document.querySelector(".toast");
+
 
 function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
+    mainInfo.classList.add("hidden");
+    weatherStats.classList.add("hidden");
 
     setTimeout(() => {
         toast.classList.remove("show");
@@ -25,15 +30,17 @@ function showToast(message) {
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    
-    if(response.status == 404) {
-        showToast("City not found");
-        return; 
-    }
-    
     const data = await response.json();
 
     console.log(data);
+    
+    if(!response.ok) {
+        showToast("City not found");
+        return; 
+    }
+
+    mainInfo.classList.remove("hidden");
+    weatherStats.classList.remove("hidden");
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".degrees").innerHTML = Math.round(data.main.temp) + "°c";
