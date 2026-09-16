@@ -101,6 +101,25 @@ body {
     padding: var(--space-100) calc(var(--space-100) * 1.5);
 }
 
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333; 
+    color: var(--white-50);
+    padding: var(--space-100) var(--space-200);
+    border-radius: var(--radius-md);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
 .main-info {
     flex-direction: column;
     align-items: center;
