@@ -16,7 +16,6 @@ const icons = {
 }; 
 const toast = document.querySelector(".toast");
 
-
 function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
