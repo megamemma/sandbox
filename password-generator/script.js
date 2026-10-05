@@ -12,7 +12,7 @@ function getCharRange(start, end) {
 const symbols = `!"#$%&'()*+,-.\\/:;<=>?@[\]^_\`{|}~`;
 const upperCase = getCharRange(65, 90); // A-Z
 const lowerCase = getCharRange(97, 122); // a-z 
-const numbers = getCharRange(48, 67); // 0-9
+const numbers = getCharRange(48, 57); // 0-9
 
 const allChars = upperCase + lowerCase + numbers + symbols;
 const toast = document.querySelector(".toast");
