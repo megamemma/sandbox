@@ -11,8 +11,12 @@ body {
 }
 
 .container {
+    height: 100dvh;
+
     display: grid;
-    place-items: start;
+    place-items: center start;
+    align-content: center;
+
     margin-left: 4rem;
     margin-top: 15%;
     max-width: 1440px;
