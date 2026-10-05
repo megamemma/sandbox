@@ -17,6 +17,10 @@ const numbers = getCharRange(48, 57); // 0-9
 const allChars = upperCase + lowerCase + numbers + symbols;
 const toast = document.querySelector(".toast");
 
+function shuffle(str) {
+    return str.split('').sort(() => Math.random() - 0.5).join('');
+}
+
 function createPassword() {
     let password = "";
     password += upperCase[Math.floor(Math.random() * upperCase.length)];
@@ -27,7 +31,7 @@ function createPassword() {
     while(length > password.length){
         password += allChars[Math.floor(Math.random() * allChars.length)];
     }
-    passwordBox.value = password;
+    passwordBox.value = shuffle(password);
 }
 
 async function copyPassword(){
