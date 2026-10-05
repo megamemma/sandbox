@@ -15,6 +15,7 @@ const lowerCase = getCharRange(97, 122); // a-z
 const numbers = getCharRange(48, 67); // 0-9
 
 const allChars = upperCase + lowerCase + numbers + symbols;
+const toast = document.querySelector(".toast");
 
 function createPassword() {
     let password = "";
@@ -29,7 +30,19 @@ function createPassword() {
     passwordBox.value = password;
 }
 
-function copyPassword(){
-    passwordBox.select();
-    document.execCommand("copy");
+async function copyPassword(){
+    await navigator.clipboard.writeText(passwordBox.value);
+    showToast("Copied!")
+} 
+// promise-based, works regardless of selection state, is W3C-standardized (non-deprecated like execCommand was)
+
+const toast = document.querySelector(".toast");
+
+function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
 }
