@@ -36,8 +36,6 @@ async function copyPassword(){
 } 
 // promise-based, works regardless of selection state, is W3C-standardized (non-deprecated like execCommand was)
 
-const toast = document.querySelector(".toast");
-
 function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
