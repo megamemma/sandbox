@@ -6,8 +6,8 @@
 }
 
 body {
-    background: rgb(16, 37, 21);
-    color: white;
+    background: hsl(134, 40%, 10%);
+    color: hsl(0, 0%, 100%);
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     background: white;
-    color: grey;
+    color: color: hsl(0, 0%, 50%);
 
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@ body {
 }
 
 .container h1 span {
-    color: turquoise;
+    color:  hsl(174, 70%, 56%);
 }
 
 .display img {
@@ -74,8 +74,8 @@ body {
 
     font-size: 1.25rem;
     padding: 0.425rem;
-    color: white;
-    background-color: rgb(37, 110, 103);
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(174, 50%, 29%);
 
     cursor: pointer;
 }
