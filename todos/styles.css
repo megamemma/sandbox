@@ -94,3 +94,12 @@ ul li:before {
     background-image: url(./assets/images/unchecked.png);
     background-size: cover;
 }
+
+ul li.checked {
+    color: lightgray;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./assets/images/checked.png);
+}
