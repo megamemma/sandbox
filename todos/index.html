@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <main class="container">
@@ -13,12 +14,12 @@
             </h2>
             <div class="input-row">
                 <input type="text" id="input-box" placeholder="Add your text">
-                <button>Add</button>
+                <button onclick="addTask()">Add</button>
             </div>
             <ul role="list" id="list-container">
-                <li class="checked">Task 1</li>
+                <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
-                <li>Task 3</li>
+                <li>Task 3</li> -->
             </ul>
         </div>
     </main>
