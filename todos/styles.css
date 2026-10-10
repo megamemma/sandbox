@@ -103,3 +103,14 @@ ul li.checked {
 ul li.checked::before {
     background-image: url(./assets/images/checked.png);
 }
+
+ul li span {
+    font-size: 1.5rem;
+    color: gray;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 2rem;
+    height: 2rem;
+}
