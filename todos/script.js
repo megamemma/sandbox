@@ -5,6 +5,7 @@ function addTask() {
     const text = inputBox.value.trim();
     if(!text) {
         alert("You must write something.");
+        return;
     }
     
     const li = document.createElement("li");
@@ -16,12 +17,25 @@ function addTask() {
     li.appendChild(span);
     listContainer.appendChild(li);
     inputBox.value = '';
+    saveData();
 }
 
 listContainer.addEventListener("click", (e) => {
     if (e.target.matches("li")) {
         e.target.classList.toggle("checked");
-    } else if (e.target.matches("span")) {
+        saveData();
+    } 
+    else if (e.target.matches("span")) {
         e.target.parentElement.remove();
+        saveData();
     }
 });
+
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);    
+}
+
+function showTask() {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
