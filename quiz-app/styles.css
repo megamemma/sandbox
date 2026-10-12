@@ -31,7 +31,7 @@ h1 {
     border-bottom: 2px solid lightgray;
 }
 
-#answer-options {
+#answer-buttons {
     display: flex;
     flex-direction: column; 
     gap: 0.5rem;
@@ -45,13 +45,14 @@ h1 {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s;
+    text-align: start;
 }
 
 .answer-button:hover {
     background-color: hsl(0, 0%, 88%);
 }
 
-button#next-question {
+button#next-btn {
     align-self: center;
     padding: 0.5rem 1.5rem;
     border: none;
@@ -61,7 +62,7 @@ button#next-question {
     display: none; /* Hide the button, pull w JS */
 }
 
-button#next-question:hover {
+button#next-btn:hover {
     transform: translateY(-2px);
     background-color:hsl(0, 0%, 78%);
 }
