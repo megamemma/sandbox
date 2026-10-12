@@ -48,14 +48,16 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz () { 
+function startQuiz() { 
     currentQuestionIndex = 0;
     score = 0;
     nextButton.textContent = "Next";
     showQuestion();
 }
 
-function showQuestion () { 
+function showQuestion() { 
+    resetState();
+
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     quizQuestion.textContent = questionNo + ". " + currentQuestion.question;
@@ -66,6 +68,11 @@ function showQuestion () {
         button.classList.add("answer-button");
         answerButtons.appendChild(button);
     });
+}
+
+function resetState() {
+    nextButton.style.display = "none";
+    answerButtons.replaceChildren();
 }
 
 startQuiz();
