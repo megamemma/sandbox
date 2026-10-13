@@ -66,3 +66,11 @@ button#next-btn:hover {
     transform: translateY(-2px);
     background-color:hsl(0, 0%, 78%);
 }
+
+.correct {
+    background: rgb(79, 146, 79);
+}
+
+.incorrect {
+    background: rgb(169, 81, 81);
+}
