@@ -77,7 +77,7 @@ function showQuestion() {
 }
 
 function resetState() {
-    nextButton.style.display = "none";
+    nextButton.hidden = true;
     answerButtons.replaceChildren();
 }
 
@@ -99,7 +99,7 @@ function selectAnswer(e) {
         button.disabled = true;
         button.style.color = "hsl(0, 0%, 30%)";
     });
-    nextButton.style.display = "block";
+    nextButton.hidden = false;
 
 }
 
@@ -107,7 +107,7 @@ function showScore() {
     resetState();
     quizQuestion.textContent = `You scored ${score} out of ${questions.length}!`;
     nextButton.textContent = "Play again";
-    nextButton.style.display = "block";
+    nextButton.hidden = false;
 }
 
 function handleNextButton() {

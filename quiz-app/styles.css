@@ -62,8 +62,6 @@ button#next-btn {
     border: none;
     background-color: hsl(0, 0%, 58%);
     color: white;
-
-    display: none; /* Hide the button, pull w JS */
 }
 
 button#next-btn:hover {
