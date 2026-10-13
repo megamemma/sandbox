@@ -35,7 +35,7 @@ const questions = [
             { text: "Africa", correct: false },
             { text: "South America", correct: false },
             { text: "Australia", correct: true },
-            { text: "Switzerland", correct: false },
+            { text: "Asia", correct: false },
         ],
     }
 
@@ -58,21 +58,17 @@ function startQuiz() {
 function showQuestion() { 
     resetState();
 
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    quizQuestion.textContent = questionNo + ". " + currentQuestion.question;
+    const currentQuestion = questions[currentQuestionIndex];
+    quizQuestion.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
-    currentQuestion.answers.forEach (answer => {
+    currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.textContent = answer.text;
         button.classList.add("answer-button");
-        answerButtons.appendChild(button);
-
-        // Add true/false from the objects:
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
+        button.dataset.correct = answer.correct;
         button.addEventListener("click", selectAnswer);
+
+        answerButtons.appendChild(button);        
     });
 }
 
@@ -83,24 +79,16 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
-    if (isCorrect) {
-        selectedBtn.classList.add("correct");
-        score++;
-    } else {
-        selectedBtn.classList.add("incorrect");
-    }
+
+    if (selectedBtn.dataset.correct === "true")  score++;
+    else selectedBtn.classList.add("incorrect");
 
     // Check the buttons for right/wrong answers, and disable choosing other options:
-    Array.from(answerButtons.children).forEach(button => {
-        if(button.dataset.correct === "true") {
-            button.classList.add("correct");
-        } 
+    answerButtons.querySelectorAll("button").forEach(button => {
+        if(button.dataset.correct === "true") button.classList.add("correct");
         button.disabled = true;
-        button.style.color = "hsl(0, 0%, 30%)";
     });
     nextButton.hidden = false;
-
 }
 
 function showScore() {
@@ -112,19 +100,13 @@ function showScore() {
 
 function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length){
-        showQuestion();
-    } else {
-        showScore();
-    }
+    if(currentQuestionIndex < questions.length) showQuestion();
+    else showScore();
 }
 
 nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < questions.length) {
-        handleNextButton();
-    } else {
-        startQuiz();
-    }
+    if (currentQuestionIndex < questions.length) handleNextButton();
+    else startQuiz();
 });
 
 startQuiz();

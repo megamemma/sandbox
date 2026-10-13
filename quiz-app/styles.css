@@ -54,6 +54,7 @@ h1 {
 
 .answer-button:disabled {
     cursor: no-drop;
+    color: hsl(0, 0%, 30%);
 }
 
 button#next-btn {
