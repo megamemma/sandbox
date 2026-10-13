@@ -89,6 +89,17 @@ function selectAnswer(e) {
     } else {
         selectedBtn.classList.add("incorrect");
     }
+
+    // Check the buttons for right/wrong answers, and disable choosing other options:
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        } 
+        button.disabled = true;
+        button.style.color = "hsl(0, 0%, 30%)";
+    });
+    nextButton.style.display = "block";
+
 }
 
 startQuiz();

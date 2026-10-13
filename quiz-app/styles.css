@@ -48,8 +48,12 @@ h1 {
     text-align: start;
 }
 
-.answer-button:hover {
+.answer-button:hover:not([disabled]){
     background-color: hsl(0, 0%, 88%);
+}
+
+.answer-button:disabled {
+    cursor: no-drop;
 }
 
 button#next-btn {
