@@ -1,7 +1,28 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("./assets/images/table.webp");
+    background-image: url("./assets/images/casino-tablecloth.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    
+    display: grid;
+    place-items: center;
+}
+
+main {
+    max-height: 100dvh;
+    width: 350px;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(225, 208, 208);
+
+    background-color: hsla(0, 38%, 18%, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 h1 {
@@ -10,4 +31,21 @@ h1 {
 
 #message-el {
 
+}
+
+.score-els {
+    font-weight: normal;
+}
+
+#play-button {
+    background-color: goldenrod;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    width: 150px;
+    letter-spacing: 1px;
+    border: none;
+
+    align-self: center;
 }
