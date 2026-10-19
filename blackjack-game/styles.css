@@ -37,7 +37,7 @@ h1 {
     font-weight: normal;
 }
 
-#play-button {
+button {
     background-color: goldenrod;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -48,4 +48,11 @@ h1 {
     border: none;
 
     align-self: center;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+    transition: 0.2s ease-in;
 }
