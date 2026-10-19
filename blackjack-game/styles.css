@@ -1,0 +1,13 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("./assets/images/table.webp");
+    background-size: cover;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+
+}
