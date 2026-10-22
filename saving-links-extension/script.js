@@ -4,14 +4,23 @@ const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
 
 inputBtn.addEventListener("click", () => {
-    console.log("Btn clicked.")
-    const inputVal = inputEl.value;
-    myLeads.push(inputVal);
-
-    for (let i = 0; i < myLeads.length; i++) {
-        myLeads.push[i];
-        console.log(myLeads);
-    }
+    myLeads.push(inputEl.value);  
+    renderLeads();
+    inputEl.value = ''; 
 })
 
+function renderLeads() {
+    ulEl.innerHTML = ''; // wipe to prevent duplicates showing up on screen
+    
+    myLeads.forEach(lead => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = myLeads(lead);
+        a.textContent = myLeads(lead);
 
+        a.target = '_blank'; //open in new tab
+
+        li.append(a);
+        ulEl.append(li);
+    });
+}
