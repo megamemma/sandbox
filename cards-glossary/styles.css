@@ -1,0 +1,53 @@
+:root {
+    --bkgd: oklch(92.494% 0.00011 271.152);
+    --ink: oklch(25% 0.02 260);
+    --green: oklch(58% 0.14 155);
+    --green-soft: oklch(94% 0.05 155);
+    --red: oklch(58% 0.19 25);
+    --red-soft: oklch(94% 0.04 25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--bkgd);
+    color: var(--ink);
+    font: 1rem;
+}
+
+main {
+    width: min(92vw, 520px);
+}
+
+button {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+
+}
+
+.card.green {
+
+}
+
+.card.red {
+
+}
+
+.hidden {
+    display: none;
+}
