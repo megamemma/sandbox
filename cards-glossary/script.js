@@ -11,7 +11,7 @@ function parseText (text) {
         .filter(Boolean); //remove empty lines
 }
 
-document.querySelector('#start').addEventListener('click', () => {
+document.querySelector('#start-button').addEventListener('click', () => {
     const words = parseText(textarea.value);
     if(!words.length) return alert("Введи слова в формате: слово - перевод.")
 
@@ -30,4 +30,11 @@ function renderCard() {
     }
     cardText.textContent = queue[0].word;
 }
+
+textarea.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        document.querySelector('#start-button'.click());
+    }
+})
 
