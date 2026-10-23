@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cards / Карточки </title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main>
+        <!-- Scr. 1: Paste the words list -->
+        <section id="paste">
+            <p class="hint">Скопируй сюда слова с переводом (из списка)</p>
+            <textarea name="" id="input" placeholder="rely on - полагаться на &#10; fed up - сыт по горло"></textarea>
+            <button class="primary" id="start">Старт</button>
+        </section>
+
+
+        <!-- Scr. 2: Train the words -->
+         <section id="train">
+            <div class="card">
+                
+            </div>
+            <div class="row hidden">
+                <button class="yes-know"></button>
+                <button class="no-forgot"></button>
+            </div>
+         </section>
+
+         <!-- Scr. 3: Words done -->
+          <section id="words-done">
+            <div class="card">Done! / Сделано!</div>
+            <button class="primary" id="repeat-quiz">Хочу заново</button>
+          </section>
+    </main>
+</body>
+</html>
