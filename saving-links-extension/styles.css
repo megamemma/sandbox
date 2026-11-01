@@ -7,6 +7,7 @@
 body {
     height: 100dvh;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
 }
 
 main {
@@ -35,4 +36,16 @@ main {
 #input-btn:hover {
     cursor: pointer;
     transform: scale(1.009);
+}
+
+ul#collected-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+#collected-links a {
+    color: rgb(95, 138, 95);
 }

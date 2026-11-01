@@ -15,8 +15,8 @@ function renderLeads() {
     myLeads.forEach(lead => {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.href = myLeads(lead);
-        a.textContent = myLeads(lead);
+        a.href = lead;
+        a.textContent = lead;
 
         a.target = '_blank'; //open in new tab
 
