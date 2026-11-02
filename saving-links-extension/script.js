@@ -2,11 +2,20 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage;
+    renderLeads();
+}  
 
 inputBtn.addEventListener("click", () => {
     myLeads.push(inputEl.value);  
-    renderLeads();
     inputEl.value = ''; 
+
+    renderLeads();
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
 })
 
 function renderLeads() {
