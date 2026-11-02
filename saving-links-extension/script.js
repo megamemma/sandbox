@@ -2,8 +2,9 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const deleteBtn = document.querySelector("#delete-btn");
+const pasteBtn = document.querySelector("#paste-btn");
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
@@ -17,6 +18,16 @@ inputBtn.addEventListener("click", () => {
     renderLeads();
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
 })
+
+deleteBtn.addEventListener("dblclick", () => {
+    localStorage.clear();
+    myLeads = [];
+    renderLeads();
+})
+
+pasteBtn.addEventListener("click", async ()=> {
+    inputEl.value = await navigator.clipboard.readText();
+}) 
 
 function renderLeads() {
     ulEl.innerHTML = ''; // wipe to prevent duplicates showing up on screen

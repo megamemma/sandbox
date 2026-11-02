@@ -7,7 +7,7 @@
 body {
     height: 100dvh;
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 main {
@@ -22,20 +22,50 @@ main {
     padding: 0.5rem;
     background-color: rgb(227, 227, 227);
     border: none;
+    max-width: 300px;
+}
+
+#action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem; 
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: 1px solid rgb(95, 138, 95);
+    border-radius: 0.125rem;
+    max-width: fit-content;
 }
 
 #input-btn {
     background-color: rgb(95, 138, 95);
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.125rem;
-    max-width: 30%;
+}
+
+#delete-btn {
+    background: none;
+    color: rgb(95, 138, 95);
 }
 
 #input-btn:hover {
     cursor: pointer;
     transform: scale(1.009);
+}
+
+#delete-btn {
+    background: none;
+}
+
+#paste-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: rgb(95, 138, 95);
+    border: 1px solid rgb(95, 138, 95);
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
 ul#collected-links {
