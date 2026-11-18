@@ -1,15 +1,22 @@
-const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-const deleteBtn = document.querySelector("#delete-btn");
+
+const inputBtn = document.querySelector("#input-btn");
+const tabBtn = document.querySelector("#tab-btn");
 const pasteBtn = document.querySelector("#paste-btn");
+
+const deleteBtn = document.querySelector("#delete-btn");
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
     render(myLeads);
 }  
+
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"},
+]
 
 inputBtn.addEventListener("click", () => {
     myLeads.push(inputEl.value);  
@@ -17,6 +24,10 @@ inputBtn.addEventListener("click", () => {
 
     render(myLeads);
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
+})
+
+tabBtn.addEventListener("click", () => {
+    console.log(tabs.at(0).url);
 })
 
 deleteBtn.addEventListener("dblclick", () => {
