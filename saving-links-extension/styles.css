@@ -36,7 +36,7 @@ main {
     flex-direction: row;
     gap: 0.25rem; 
 
-    /* FIXME (18NOV): Workaround instead of GRID */
+    /* TODO (18NOV): Replace flex-wrap workaround w/ Grid  */
     flex-wrap: wrap;
     max-width: 250px;
 }
