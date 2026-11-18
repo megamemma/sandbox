@@ -8,31 +8,31 @@ const pasteBtn = document.querySelector("#paste-btn");
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage;
-    renderLeads();
+    render(myLeads);
 }  
 
 inputBtn.addEventListener("click", () => {
     myLeads.push(inputEl.value);  
     inputEl.value = ''; 
 
-    renderLeads();
+    render(myLeads);
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
 })
 
 deleteBtn.addEventListener("dblclick", () => {
     localStorage.clear();
     myLeads = [];
-    renderLeads();
+    render(myLeads);
 })
 
 pasteBtn.addEventListener("click", async ()=> {
     inputEl.value = await navigator.clipboard.readText();
 }) 
 
-function renderLeads() {
+function render(leads) {
     ulEl.innerHTML = ''; // wipe to prevent duplicates showing up on screen
     
-    myLeads.forEach(lead => {
+    leads.forEach(lead => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = lead;
