@@ -27,7 +27,9 @@ inputBtn.addEventListener("click", () => {
 })
 
 tabBtn.addEventListener("click", () => {
-    console.log(tabs.at(0).url);
+    myLeads.push(tabs.at(0).url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    render(myLeads);
 })
 
 deleteBtn.addEventListener("dblclick", () => {
