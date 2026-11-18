@@ -18,6 +18,12 @@ main {
     justify-content: left;
 }
 
+#input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
 #input-el {
     padding: 0.5rem;
     background-color: rgb(227, 227, 227);
@@ -29,24 +35,36 @@ main {
     display: flex;
     flex-direction: row;
     gap: 0.25rem; 
+
+    /* FIXME (18NOV): Workaround instead of GRID */
+    flex-wrap: wrap;
+    max-width: 250px;
 }
 
 button {
-    color: white;
     font-weight: bold;
     padding: 0.5rem;
     border: 1px solid rgb(95, 138, 95);
     border-radius: 0.125rem;
     max-width: fit-content;
+    background-color: rgb(95, 138, 95);
 }
 
-#input-btn {
-    background-color: rgb(95, 138, 95);
+.save-buttons {
+    color: white;
 }
 
 #delete-btn {
     background: none;
-    color: rgb(95, 138, 95);
+    color: darkred;
+    border: 2px solid darkred;
+    align-self: flex-end;
+}
+
+#delete-btn:hover {
+    cursor: pointer;
+    transform: scale(1.020);
+    background-color: #d38f8f77;
 }
 
 #input-btn:hover {
