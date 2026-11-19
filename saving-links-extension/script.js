@@ -3,7 +3,7 @@ const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-const inputBtn = document.querySelector("#input-btn");
+const inputBtn = document.querySelector("#input-btn"); // ~saveInputBtn
 const tabBtn = document.querySelector("#tab-btn");
 const pasteBtn = document.querySelector("#paste-btn");
 
@@ -14,12 +14,15 @@ if (leadsFromLocalStorage) {
     render(myLeads);
 }  
 
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"},
-]
-
 inputBtn.addEventListener("click", () => {
-    myLeads.push(inputEl.value);  
+    const cleanInput = inputEl.value.trim;
+
+    if (!cleanInput) {
+        inputEl.value = '';
+        return;
+    }
+
+    myLeads.push(cleanInput);  
     inputEl.value = ''; 
 
     render(myLeads);
@@ -27,9 +30,13 @@ inputBtn.addEventListener("click", () => {
 })
 
 tabBtn.addEventListener("click", () => {
-    myLeads.push(tabs.at(0).url);
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads);
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+
+        myLeads.push(tabs.at(0).url);
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads);
+    })
+
 })
 
 deleteBtn.addEventListener("dblclick", () => {

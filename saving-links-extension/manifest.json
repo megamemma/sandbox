@@ -6,5 +6,8 @@
         "default_popup": "index.html",
         "default_icon": "./assets/images/icon.png"
     },
-    "permissions": ["clipboardRead"]
+    "permissions": [
+        "clipboardRead",
+        "tabs"
+    ]
 }
