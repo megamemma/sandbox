@@ -13,8 +13,8 @@ const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-const inputBtn = document.querySelector("#input-btn"); // ~saveInputBtn
-const tabBtn = document.querySelector("#tab-btn");
+const inputBtn = document.querySelector("#input-btn"); // ~savebtn
+// const tabBtn = document.querySelector("#tab-btn"); // web ver
 const pasteBtn = document.querySelector("#paste-btn");
 
 const deleteBtn = document.querySelector("#delete-btn");
