@@ -11,7 +11,7 @@ const database = getDatabase(app)
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#collected-links");
 let myLeads = [];
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+// const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 const inputBtn = document.querySelector("#input-btn"); // ~savebtn
 // const tabBtn = document.querySelector("#tab-btn"); // web ver
@@ -19,10 +19,10 @@ const pasteBtn = document.querySelector("#paste-btn");
 
 const deleteBtn = document.querySelector("#delete-btn");
 
-if (leadsFromLocalStorage) {
-    myLeads = leadsFromLocalStorage;
-    render(myLeads);
-}  
+// if (leadsFromLocalStorage) {
+//     myLeads = leadsFromLocalStorage;
+//     render(myLeads);
+// }  
 
 inputBtn.addEventListener("click", () => {
     const cleanInput = inputEl.value.trim;
@@ -36,21 +36,21 @@ inputBtn.addEventListener("click", () => {
     inputEl.value = ''; 
 
     render(myLeads);
-    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    // localStorage.setItem("myLeads", JSON.stringify(myLeads));
 })
 
-tabBtn.addEventListener("click", () => {
-    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+// tabBtn.addEventListener("click", () => {
+//     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
 
-        myLeads.push(tabs.at(0).url);
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads);
-    })
+//         myLeads.push(tabs.at(0).url);
+//         localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+//         render(myLeads);
+//     })
 
-})
+// })
 
 deleteBtn.addEventListener("dblclick", () => {
-    localStorage.clear();
+    // localStorage.clear();
     myLeads = [];
     render(myLeads);
 })
