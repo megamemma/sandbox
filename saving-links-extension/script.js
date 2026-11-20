@@ -32,10 +32,11 @@ inputBtn.addEventListener("click", () => {
         return;
     }
 
-    myLeads.push(cleanInput);  
+    // myLeads.push(cleanInput); 
+    console.log(cleanInput);
     inputEl.value = ''; 
 
-    render(myLeads);
+    // render(myLeads);
     // localStorage.setItem("myLeads", JSON.stringify(myLeads));
 })
 
@@ -51,8 +52,8 @@ inputBtn.addEventListener("click", () => {
 
 deleteBtn.addEventListener("dblclick", () => {
     // localStorage.clear();
-    myLeads = [];
-    render(myLeads);
+    // myLeads = [];
+    // render(myLeads);
 })
 
 pasteBtn.addEventListener("click", async ()=> {
